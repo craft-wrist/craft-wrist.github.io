@@ -31,6 +31,11 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+        
+      - name: Create OpenAI hosting config
+        run: |
+          mkdir -p .openai
+          printf '{\n  "d1": null,\n  "r2": null\n}\n' > .openai/hosting.json
 
       - name: Build static website
         run: npm run build
