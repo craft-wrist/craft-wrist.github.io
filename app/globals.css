@@ -16,7 +16,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-geist-sans), Arial, sans-serif; font-size: 16px; overflow-x: clip; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Segoe UI", system-ui, sans-serif; font-size: 16px; line-height: 1.5; overflow-x: clip; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; }
 figure, p, h1, h2, h3 { margin: 0; }
@@ -29,10 +29,10 @@ ul { list-style: none; margin: 0; padding: 0; }
 .section-kicker, .eyebrow, .label, .metric-label, .metric-note, .stage-kicker, .resource-status, .resource-description, .resource-index, .image-stamp, figcaption, .spec-item span, .next-measurement span, .evidence-range span, .status-tag { font-family: var(--font-geist-mono), monospace; letter-spacing: .04em; text-transform: uppercase; }
 .section-kicker { color: #64707c; font-size: .68rem; font-weight: 700; }
 .section-heading { align-items: end; display: flex; justify-content: space-between; gap: 44px; margin-bottom: 56px; }
-.section-heading h2 { max-width: 760px; margin-top: 14px; font-size: clamp(2.25rem, 4vw, 4.4rem); line-height: .98; letter-spacing: -.075em; font-weight: 680; }
+.section-heading h2 { max-width: 760px; margin-top: 14px; font-size: clamp(2.15rem, 3.5vw, 3.8rem); line-height: 1.02; letter-spacing: -.055em; font-weight: 680; }
 .heading-note { max-width: 320px; color: var(--muted); font-size: .92rem; line-height: 1.55; }
 .label { color: #64707c; font-size: .66rem; font-weight: 700; }
-.large-copy { font-size: clamp(1.8rem, 3vw, 3.1rem); line-height: 1.08; letter-spacing: -.055em; }
+.large-copy { font-size: clamp(1.65rem, 2.6vw, 2.55rem); line-height: 1.16; letter-spacing: -.04em; }
 
 /* header */
 .site-header { align-items: center; background: rgba(242, 240, 234, .9); border-bottom: 1px solid var(--line); display: flex; height: 76px; justify-content: space-between; padding: 0 48px; position: sticky; top: 0; z-index: 20; backdrop-filter: blur(18px); }
@@ -53,9 +53,9 @@ ul { list-style: none; margin: 0; padding: 0; }
 .hero-copy, .hero-figure, .hero-metrics { position: relative; z-index: 1; }
 .eyebrow { align-items: center; display: flex; gap: 10px; color: var(--blue-soft); font-size: .67rem; font-weight: 700; }
 .eyebrow-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--acid); box-shadow: 0 0 0 4px rgba(215,245,98,.12); }
-.hero h1 { margin-top: 28px; font-size: clamp(5rem, 10vw, 10.5rem); line-height: .82; letter-spacing: -.1em; font-weight: 760; }
+.hero h1 { margin-top: 28px; font-size: clamp(5rem, 9vw, 9rem); line-height: .88; letter-spacing: -.085em; font-weight: 760; }
 .accent { color: var(--blue); }
-.hero-title { max-width: 620px; margin-top: 34px; font-size: clamp(1.5rem, 2.4vw, 2.5rem); line-height: 1.05; letter-spacing: -.055em; font-weight: 600; }
+.hero-title { max-width: 620px; margin-top: 34px; font-size: clamp(1.4rem, 2.2vw, 2.2rem); line-height: 1.14; letter-spacing: -.045em; font-weight: 600; }
 .hero-lede { max-width: 500px; margin-top: 20px; color: #aeb8c3; font-size: 1rem; line-height: 1.6; }
 .hero-byline { margin-top: 38px; color: #f7f8fa; font-size: .78rem; line-height: 1.75; }
 .hero-byline p + p { color: #73808d; font-size: .7rem; }
@@ -84,7 +84,7 @@ figcaption { display: flex; justify-content: space-between; gap: 16px; margin-to
 /* proposition */
 .problem-section { padding: 150px 0 160px; }
 .section-intro { display: grid; grid-template-columns: .42fr 1fr; gap: 60px; padding-bottom: 62px; border-bottom: 1px solid var(--line); }
-.section-intro h2 { max-width: 800px; font-size: clamp(2.7rem, 5vw, 5.5rem); line-height: .93; letter-spacing: -.09em; font-weight: 670; }
+.section-intro h2 { max-width: 800px; font-size: clamp(2.55rem, 4.4vw, 4.7rem); line-height: 1; letter-spacing: -.065em; font-weight: 670; }
 .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 12vw, 180px); padding-top: 58px; }
 .problem-statement { max-width: 500px; }
 .problem-statement .large-copy { margin-top: 18px; }

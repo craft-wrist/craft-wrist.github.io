@@ -40,10 +40,10 @@ export default function Home() {
           </div>
           <figure className="hero-figure">
             <div className="hero-image-frame">
-              <PictureImage src="/media/craft-w-system.png" webp="/media/craft-w-system.webp" width={1800} height={1416} alt="CRAFT-W hardware: CAD assembly, physical prototype, and enlarged wrist-module view, with the CRAFT Hand mounted" className="hero-img" fetchPriority="high" />
+              <PictureImage src="/media/fig1_pyj3.png" width={3480} height={1971} alt="CRAFT-W system overview showing the CAD model, physical prototype, and wrist module" className="hero-img" fetchPriority="high" />
               <span className="image-stamp">Fig. 01 / system</span>
             </div>
-            <figcaption>CAD assembly / assembled prototype</figcaption>
+            <figcaption>System overview / CAD + prototype + wrist module</figcaption>
           </figure>
           <div className="hero-metrics" aria-label="CRAFT-W at a glance">
             {axisCards.map((card) => <div className="metric" key={card.label}><span className="metric-label">{card.label}</span><strong>{card.value}</strong><span className="metric-note">{card.note}</span></div>)}

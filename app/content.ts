@@ -23,7 +23,9 @@ export const resources: Resource[] = [
     index: '02',
     label: 'Assembly guide',
     description: 'Documentation and assembly video',
-    status: 'coming-soon',
+    status: 'available',
+    href: 'https://www.youtube.com/watch?v=n6Zhwm3bFOk',
+    external: true,
   },
   {
     id: 'bom',
@@ -38,8 +40,9 @@ export const resources: Resource[] = [
     id: 'print-files',
     index: '04',
     label: 'Print files',
-    description: '3D-printable part files',
-    status: 'coming-soon',
+    description: '3MF package for 3D printing',
+    status: 'available',
+    href: '/media/craft-w-print-files.3mf',
   },
   {
     id: 'control-api',

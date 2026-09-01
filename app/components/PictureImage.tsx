@@ -1,6 +1,6 @@
 interface PictureImageProps {
   src: string;
-  webp: string;
+  webp?: string;
   width: number;
   height: number;
   alt: string;
@@ -23,7 +23,7 @@ export default function PictureImage({
 }: PictureImageProps) {
   return (
     <picture>
-      <source srcSet={webp} type="image/webp" />
+      {webp ? <source srcSet={webp} type="image/webp" /> : null}
       <img
         src={src}
         width={width}

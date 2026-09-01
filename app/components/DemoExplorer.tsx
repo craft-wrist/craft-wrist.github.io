@@ -66,7 +66,7 @@ export function ResourceExplorer({ resources }: { resources: Resource[] }) {
         <h3>{active.label}</h3>
         <p>{active.description}</p>
         {isAvailable ? (
-          <a className="detail-action" href={active.href} target={active.external ? '_blank' : undefined} rel={active.external ? 'noreferrer' : undefined}>Open {active.label}<span aria-hidden="true">↗</span></a>
+          <a className="detail-action" href={active.href} target={active.external ? '_blank' : undefined} rel={active.external ? 'noreferrer' : undefined} download={active.id === 'print-files' ? 'craft-w-print-files.3mf' : undefined}>{active.id === 'print-files' ? 'Download' : 'Open'} {active.label}<span aria-hidden="true">↗</span></a>
         ) : (
           <p className="detail-note">This item will activate here when the public release is ready.</p>
         )}
