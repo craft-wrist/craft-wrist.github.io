@@ -2,6 +2,7 @@ import Header from '@/app/components/Header';
 import BibTeXCopy from '@/app/components/BibTeXCopy';
 import PictureImage from '@/app/components/PictureImage';
 import DemoExplorer from '@/app/components/DemoExplorer';
+import { ResourceExplorer } from '@/app/components/DemoExplorer';
 import { bibtex, resources, specs, taskVideos } from '@/app/content';
 
 const axisCards = [
@@ -83,7 +84,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="resources-section" id="resources"><div className="section-shell"><div className="section-heading"><div><p className="section-kicker">05 / Build from the work</p><h2>Open hardware, in stages.</h2></div><p className="heading-note">Verified links are live. The rest will activate as the release is ready.</p></div><div className="resource-grid">{resources.map((resource) => { const available = resource.status === 'available' && resource.href; const inner = <><span className="resource-index">{resource.index}</span><span className="resource-name">{resource.label}</span><span className="resource-description">{resource.description}</span><span className={available ? 'resource-status live' : 'resource-status'}>{available ? 'Open ↗' : 'Coming soon'}</span></>; return <article className={`resource-card ${available ? 'is-live' : ''}`} key={resource.id}>{available ? <a href={resource.href} target={resource.external ? '_blank' : undefined} rel={resource.external ? 'noreferrer' : undefined}>{inner}</a> : inner}</article>; })}</div></div></section>
+        <section className="resources-section" id="resources"><div className="section-shell"><div className="section-heading"><div><p className="section-kicker">05 / Build from the work</p><h2>Open hardware, in stages.</h2></div><p className="heading-note">Select a resource to see what is available now and what is being prepared.</p></div><ResourceExplorer resources={resources} /></div></section>
 
         <section className="citation-section" id="cite"><div className="section-shell citation-shell"><div><p className="section-kicker">06 / Reference</p><h2>Cite the work in progress.</h2><p className="citation-note">The manuscript is in preparation. This provisional citation will be replaced with the public record when released.</p></div><div className="citation-block"><BibTeXCopy bibtex={bibtex} /><pre><code>{bibtex}</code></pre></div></div></section>
 
