@@ -129,6 +129,7 @@ figcaption { display: flex; justify-content: space-between; gap: 16px; margin-to
 .design-section { padding: 150px 0 160px; }
 .design-layout { display: grid; grid-template-columns: minmax(260px, .72fr) minmax(0, 1.28fr); gap: clamp(50px, 10vw, 150px); align-items: start; }
 .design-figure img { display: block; width: 100%; height: 620px; object-fit: cover; object-position: center 54%; filter: saturate(.8); }
+.workspace-figure img { height: 620px; object-fit: contain; object-position: center; background: #f8f8f6; filter: none; }
 .design-figure figcaption { color: #6e777f; }
 .design-content { padding-top: 20px; }
 .design-intro { max-width: 580px; color: #4e565d; font-size: clamp(1.25rem, 2vw, 1.75rem); line-height: 1.25; letter-spacing: -.035em; }
@@ -150,24 +151,17 @@ figcaption { display: flex; justify-content: space-between; gap: 16px; margin-to
 .coupling-copy { max-width: 440px; }
 .coupling-copy .large-copy { margin-top: 16px; }
 .coupling-copy > p:not(.label):not(.large-copy) { margin-top: 22px; color: #596168; line-height: 1.65; font-size: .9rem; }
-.equation { display: inline-block; margin-top: 34px; padding: 18px 22px; background: var(--dark); color: var(--acid); font-family: var(--font-geist-mono), monospace; font-size: 1.2rem; }
+.coupling-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 34px; padding-top: 20px; border-top: 1px solid var(--line); }
+.coupling-stats div { display: flex; flex-direction: column; gap: 7px; }
+.coupling-stats strong { font-size: 1.15rem; letter-spacing: -.04em; }
+.coupling-stats span { color: #6e777f; font-family: var(--font-geist-mono), monospace; font-size: .56rem; line-height: 1.35; text-transform: uppercase; }
 .coupling-route { padding: 12px; background: var(--paper); border: 1px solid var(--line); }
 .coupling-route img { display: block; width: 100%; height: auto; }
 .coupling-route figcaption { color: #6e777f; }
-.evidence-panel { display: grid; grid-template-columns: .75fr 1.25fr; gap: 60px; align-items: center; margin-top: 110px; padding: 38px; background: var(--dark); color: white; }
-.evidence-copy { max-width: 380px; }
-.evidence-copy .label { color: var(--blue-soft); }
-.evidence-copy h3 { margin-top: 18px; font-size: 1.65rem; line-height: 1.03; letter-spacing: -.05em; }
-.evidence-copy > p:not(.label) { margin-top: 18px; color: #98a5b1; font-size: .84rem; line-height: 1.55; }
-.evidence-range { display: grid; grid-template-columns: auto 1fr; gap: 8px 14px; margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--dark-line); }
-.evidence-range span { color: #798692; font-size: .58rem; }
-.evidence-range strong { font-family: var(--font-geist-mono), monospace; font-size: .7rem; font-weight: 500; }
-.coupling-plot { min-width: 0; }
-.coupling-plot img { display: block; width: 100%; height: auto; background: #10161d; }
-.coupling-plot figcaption { color: #8793a0; }
-.next-measurement { display: grid; grid-template-columns: 180px 1fr; gap: 30px; max-width: 760px; margin: 34px 0 0 auto; padding-top: 22px; border-top: 1px solid var(--line); }
-.next-measurement span { color: #65717a; font-size: .62rem; font-weight: 700; }
-.next-measurement p { color: #596168; font-size: .84rem; line-height: 1.5; }
+.coupling-findings { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 76px; padding-top: 28px; border-top: 1px solid var(--line); }
+.coupling-findings article { min-width: 0; }
+.coupling-findings article + article { padding-left: 28px; border-left: 1px solid var(--line); }
+.coupling-findings article > p:not(.label) { margin-top: 14px; color: #596168; font-size: .86rem; line-height: 1.6; }
 
 /* resources / citation / footer */
 .resources-section { padding: 140px 0 150px; }
@@ -232,7 +226,7 @@ footer > a:last-child { border-bottom: 1px solid white; padding-bottom: 4px; fon
   .hero { grid-template-columns: 1fr; min-height: auto; padding: 76px 28px 60px; }
   .hero-figure { justify-self: start; max-width: 720px; }
   .hero-metrics { margin-top: 20px; }
-  .section-intro, .problem-grid, .coupling-grid, .evidence-panel, .citation-shell { grid-template-columns: 1fr; }
+  .section-intro, .problem-grid, .coupling-grid, .citation-shell { grid-template-columns: 1fr; }
   .section-intro { gap: 28px; }
   .problem-grid { gap: 50px; }
   .section-heading { align-items: start; flex-direction: column; gap: 24px; }
@@ -247,7 +241,7 @@ footer > a:last-child { border-bottom: 1px solid white; padding-bottom: 4px; fon
   .demo-stage-copy { padding: 12px 0 0; }
   .demo-footnote { margin-left: 0; }
   .design-layout { grid-template-columns: 1fr; gap: 46px; }
-  .design-figure img { height: 500px; }
+  .design-figure img, .workspace-figure img { height: 500px; }
   .spec-strip { grid-template-columns: repeat(4, 1fr); row-gap: 24px; }
   .spec-item:nth-child(5) { padding-left: 0; }
   .spec-item:nth-child(4) { border-right: 0; }
@@ -279,7 +273,7 @@ footer > a:last-child { border-bottom: 1px solid white; padding-bottom: 4px; fon
   .demo-tabs button { min-height: 56px; }
   .demo-stage-media { min-height: 420px; }
   .stage-split { grid-template-columns: 1fr 1fr; }
-  .design-figure img { height: 420px; }
+  .design-figure img, .workspace-figure img { height: 420px; }
   .spec-strip { grid-template-columns: repeat(2, 1fr); }
   .spec-item:nth-child(4) { border-right: 1px solid var(--line); }
   .spec-item:nth-child(odd) { padding-left: 0; }
@@ -292,8 +286,9 @@ footer > a:last-child { border-bottom: 1px solid white; padding-bottom: 4px; fon
   .resource-row-state { font-size: .53rem; }
   .resource-detail { min-height: 280px; padding: 22px; }
   .resource-detail h3 { font-size: 2.65rem; }
-  .evidence-panel { margin-top: 70px; padding: 24px; gap: 40px; }
-  .next-measurement { grid-template-columns: 1fr; gap: 12px; }
+  .coupling-stats { gap: 8px; }
+  .coupling-findings { grid-template-columns: 1fr; gap: 24px; margin-top: 52px; }
+  .coupling-findings article + article { padding-left: 0; padding-top: 24px; border-left: 0; border-top: 1px solid var(--line); }
   footer { grid-template-columns: 1fr; gap: 24px; padding: 38px 20px; }
 }
 
