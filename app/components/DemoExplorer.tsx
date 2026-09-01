@@ -26,7 +26,7 @@ export default function DemoExplorer({ tasks }: { tasks: TaskVideo[] }) {
         ))}
       </div>
       <div className="demo-stage" id={`demo-panel-${active.id}`} role="tabpanel" aria-labelledby={`demo-tab-${active.id}`} tabIndex={0}>
-        <div className="demo-stage-media"><VideoPlayer key={active.id} src={active.src} poster={active.poster} label={`${active.label} demonstration video`} /></div>
+        <div className="demo-stage-media"><VideoPlayer key={active.id} src={active.src} poster={active.poster} playbackRate={1.5} label={`${active.label} demonstration video`} /></div>
         <div className="demo-stage-copy">
           <p className="stage-kicker">Task {active.index} / local correction</p>
           <h3>{active.label}</h3>

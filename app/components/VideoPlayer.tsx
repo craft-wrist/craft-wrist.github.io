@@ -7,6 +7,7 @@ interface VideoPlayerProps {
   poster: string;
   label: string;
   autoplay?: boolean;
+  playbackRate?: number;
   className?: string;
 }
 
@@ -49,12 +50,20 @@ export default function VideoPlayer({
   poster,
   label,
   autoplay = false,
+  playbackRate = 1.5,
   className,
 }: VideoPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
   const [failed, setFailed] = useState(false);
   const reducedMotion = usePrefersReducedMotion();
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.defaultPlaybackRate = playbackRate;
+    video.playbackRate = playbackRate;
+  }, [playbackRate]);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -92,6 +101,9 @@ export default function VideoPlayer({
         muted
         playsInline
         preload={autoplay ? 'metadata' : 'none'}
+        onLoadedMetadata={() => {
+          if (videoRef.current) videoRef.current.playbackRate = playbackRate;
+        }}
         aria-label={label}
         onPlay={() => setPlaying(true)}
         onPause={() => setPlaying(false)}
