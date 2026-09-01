@@ -23,10 +23,11 @@ static host.
 
 ## Public resource links
 
-The arXiv paper, assembly documentation and video, BOM, print-file repository,
-control API, and Onshape document are currently marked **coming soon**. Add each
-verified public URL to the `resources` collection in `app/page.tsx` when it is
-released; do not publish guessed or private links.
+The arXiv paper, assembly documentation and video, print-file repository, and
+control API are currently marked **coming soon**. The BOM spreadsheet and the
+SolidWorks CAD repository are already available. Add each verified public URL to
+the `resources` collection in `app/content.ts` when it is released; do not
+publish guessed or private links.
 
 The current teaser is an 11-second overview montage made from the figures in
 `CRAFT-Wrist-IROS-2026-Paper`. Replace `public/media/craft-w-teaser.mp4` with

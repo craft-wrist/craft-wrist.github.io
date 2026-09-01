@@ -17,11 +17,23 @@ export const metadata: Metadata = {
   title: 'CRAFT-W — A Direct-drive Two-DoF Wrist Extension',
   description:
     'CRAFT-W is a concentric two-DoF wrist extension for the tendon-driven CRAFT Hand, designed for local orientation control and measurable wrist–finger tendon coupling.',
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'CRAFT-W — A Direct-drive Two-DoF Wrist Extension',
     description:
       'A concentric two-DoF wrist extension for the tendon-driven CRAFT Hand.',
-    images: ['/og.png'],
+    url: 'https://craft-wrist.github.io/',
+    siteName: 'CRAFT-W',
+    images: [
+      {
+        url: '/og.png',
+        width: 1800,
+        height: 1416,
+        alt: 'CRAFT-W: CAD model and assembled prototype of a two-DoF wrist extension for the CRAFT Hand',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
@@ -35,6 +47,21 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Project',
+  name: 'CRAFT-W: A Direct-drive Two-DoF Wrist Extension for the CRAFT Hand',
+  description:
+    'A concentric two-DoF wrist extension for the tendon-driven CRAFT Hand, providing local hand orientation for confined-space manipulation without modifying the hand.',
+  url: 'https://craft-wrist.github.io/',
+  isAccessibleForFree: true,
+  creator: [
+    { '@type': 'Person', name: 'Yujie Pang' },
+    { '@type': 'Person', name: 'Sadman Sakib' },
+    { '@type': 'Person', name: 'Mohammad Abdullah Al Faruque' },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -45,7 +72,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <a className="skip-link" href="#main">
+          Skip to content
+        </a>
         {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </body>
     </html>
   );
