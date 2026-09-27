@@ -25,10 +25,9 @@ export default function Home() {
         <section className="hero" id="top">
           <div className="hero-grid" aria-hidden="true" />
           <div className="hero-copy">
-            <p className="eyebrow"><span className="eyebrow-dot" /> Robotics hardware / 2026</p>
-            <h1>CRAFT<span className="accent">-W</span></h1>
-            <p className="hero-title">A direct-drive two-DoF wrist extension for the CRAFT Hand.</p>
-            <p className="hero-lede">Local hand orientation for confined-space manipulation—without redesigning the hand.</p>
+            <h1>CRAFT<span className="accent">-Wrist</span></h1>
+            <p className="hero-title">A Direct Rigid Transmission 2-DoF Wrist Extension for Tendon-Driven Hand</p>
+            {/* <p className="hero-lede">Local hand orientation for confined-space manipulation—without redesigning the hand.</p> */}
             <div className="hero-byline">
               <p>Yujie Pang<sup>1,2</sup> · Sadman Sakib<sup>1</sup> · Mohammad Abdullah Al Faruque<sup>1</sup></p>
               <p><sup>1</sup>University of California, Irvine &nbsp;·&nbsp; <sup>2</sup>UCInspire</p>
@@ -48,15 +47,15 @@ export default function Home() {
                 src="/media/fig1_pyj3.png"
                 width={3480}
                 height={1971}
-                alt="CRAFT-W system overview showing the CAD model, physical prototype, and wrist module"
+                alt="CRAFT-Wrist system overview showing the CAD model, physical prototype, and wrist module"
                 className="hero-img"
                 fetchPriority="high"
               />
               <span className="image-stamp">Fig. 01 / system</span>
             </div>
-            <figcaption>System overview / CAD + prototype + wrist module</figcaption>
+            <figcaption>(left) CAD design (middle) Physical assembly (right) Close-up of the wrist</figcaption>
           </figure>
-          <div className="hero-metrics" aria-label="CRAFT-W at a glance">
+          <div className="hero-metrics" aria-label="CRAFT-Wrist at a glance">
             {axisCards.map((card) => (
               <div className="metric" key={card.label}>
                 <span className="metric-label">{card.label}</span>
@@ -69,24 +68,23 @@ export default function Home() {
 
         <section className="section-shell problem-section" id="overview">
           <div className="section-intro">
-            <p className="section-kicker">01 / The proposition</p>
-            <h2>Give the hand a local wrist—then measure what changes.</h2>
+            <h2>Motivation</h2>
           </div>
           <div className="problem-grid">
             <div className="problem-statement">
-              <p className="label">The limitation</p>
+              <p className="label">Limitation of No-wrist Hand</p>
               <p className="large-copy">
-                A robot arm can move the hand into place, but confined tasks often need a smaller, local orientation correction at the tool.
+                A robot arm can move the hand into different places, but confined tasks often need a smaller local orientation correction near the fingers.
               </p>
             </div>
             <div className="problem-answer">
-              <p className="label">The CRAFT-W approach</p>
+              <p className="label">Value of CRAFT-Wrist</p>
               <p>
-                CRAFT-W mounts between the arm and the tendon-driven CRAFT Hand. Its two direct-drive axes add local orientation control while keeping the hand itself unchanged.
+                CRAFT-Wrist is mounted between the arm and the tendon-driven CRAFT Hand. Its two direct-drive axes add local orientation control while keeping the hand itself unchanged.
               </p>
-              <a className="text-link" href="#coupling">
+              {/* <a className="text-link" href="#coupling">
                 See the coupling question <span aria-hidden="true">↗</span>
-              </a>
+              </a> */}
             </div>
           </div>
         </section>
@@ -95,28 +93,25 @@ export default function Home() {
           <div className="section-shell">
             <div className="section-heading on-dark">
               <div>
-                <p className="section-kicker">02 / Physical evidence</p>
-                <h2>One wrist. Three task roles.</h2>
+                <h2>Demonstrations</h2>
               </div>
-              <p className="heading-note">Switch tasks to see where local orientation enters the manipulation loop.</p>
+              {/* <p className="heading-note">Switch tasks to see where local orientation enters the manipulation loop.</p> */}
             </div>
             <DemoExplorer tasks={taskVideos} />
-            <div className="demo-footnote">
+            {/* <div className="demo-footnote">
               <span className="status-tag planned">Planned comparison</span>
               <p>
                 Wrist-locked versus actively controlled trials (W0 / W1 / W2) will isolate the value and cost of the added DoF.
               </p>
-            </div>
+            </div> */}
           </div>
         </section>
 
         <section className="section-shell design-section" id="design">
           <div className="section-heading">
             <div>
-              <p className="section-kicker">03 / Mechanical design</p>
-              <h2>Two axes. One wrist center.</h2>
+              <h2>Mechanical Design</h2>
             </div>
-            <p className="heading-note">A compact extension designed around the existing hand, tendon route, and service needs.</p>
           </div>
           <div className="design-layout">
             <figure className="design-figure workspace-figure">
@@ -124,7 +119,7 @@ export default function Home() {
                 src="/media/craft-w-wrist-workspace.png"
                 width={1024}
                 height={1536}
-                alt="CRAFT-W wrist workspace showing radial–ulnar deviation and flexion–extension ranges"
+                alt="CRAFT-Wrist wrist workspace showing radial–ulnar deviation and flexion–extension ranges"
                 loading="lazy"
                 decoding="async"
               />
@@ -150,7 +145,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="spec-strip" aria-label="CRAFT-W specifications">
+          <div className="spec-strip" aria-label="CRAFT-Wrist specifications">
             {specs.map((spec) => (
               <div className="spec-item" key={spec.label}>
                 <span>{spec.label}</span>
@@ -164,12 +159,8 @@ export default function Home() {
           <div className="section-shell">
             <div className="section-heading">
               <div>
-                <p className="section-kicker">04 / Coupling characterization</p>
-                <h2>Test the finger across four wrist postures.</h2>
+                <h2>Coupling Characterization</h2>
               </div>
-              <p className="heading-note">
-                The paper treats wrist–finger coupling as a preliminary mechanical characterization—not a complete identification.
-              </p>
             </div>
             <div className="coupling-grid">
               <div className="coupling-copy">
@@ -260,7 +251,7 @@ export default function Home() {
         </section>
 
         <footer>
-          <a className="brand footer-brand" href="#top" aria-label="CRAFT-W home">
+          <a className="brand footer-brand" href="#top" aria-label="CRAFT-Wrist home">
             {/* <span className="brand-mark" aria-hidden="true">CW</span> */}
             <span>CRAFT-Wrist</span>
           </a>

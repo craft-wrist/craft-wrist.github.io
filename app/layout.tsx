@@ -14,30 +14,30 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://craft-wrist.github.io'),
-  title: 'CRAFT-W — A Direct-drive Two-DoF Wrist Extension',
+  title: 'CRAFT-Wrist — A Direct Rigid Transmission 2-DoF Wrist Extension for Tendon-Driven Hand',
   description:
-    'CRAFT-W is a concentric two-DoF wrist extension for the tendon-driven CRAFT Hand, designed for local orientation control and measurable wrist–finger tendon coupling.',
+    'CRAFT-Wrist is a concentric two-DoF wrist extension for the tendon-driven CRAFT Hand, designed for local orientation control and measurable wrist–finger tendon coupling.',
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'CRAFT-W — A Direct-drive Two-DoF Wrist Extension',
+    title: 'CRAFT-Wrist — A Direct Rigid Transmission 2-DoF Wrist Extension for Tendon-Driven Hand',
     description:
       'A concentric two-DoF wrist extension for the tendon-driven CRAFT Hand.',
     url: 'https://craft-wrist.github.io/',
-    siteName: 'CRAFT-W',
+    siteName: 'CRAFT-Wrist',
     images: [
       {
         url: '/og.png',
         width: 1800,
         height: 1416,
-        alt: 'CRAFT-W: CAD model and assembled prototype of a two-DoF wrist extension for the CRAFT Hand',
+        alt: 'CRAFT-Wrist: CAD model and assembled prototype of a two-DoF wrist extension for the CRAFT Hand',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CRAFT-W — A Direct-drive Two-DoF Wrist Extension',
+    title: 'CRAFT-Wrist — A Direct Rigid Transmission 2-DoF Wrist Extension for Tendon-Driven Hand',
     description:
       'A concentric two-DoF wrist extension for the tendon-driven CRAFT Hand.',
     images: ['/og.png'],
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Project',
-  name: 'CRAFT-W: A Direct-drive Two-DoF Wrist Extension for the CRAFT Hand',
+  name: 'CRAFT-Wrist: A Direct-drive Two-DoF Wrist Extension for the CRAFT Hand',
   description:
     'A concentric two-DoF wrist extension for the tendon-driven CRAFT Hand, providing local hand orientation for confined-space manipulation without modifying the hand.',
   url: 'https://craft-wrist.github.io/',

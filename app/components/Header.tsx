@@ -48,9 +48,9 @@ export default function Header() {
 
   return (
     <header className="site-header">
-      <a className="brand" href="#top" onClick={closeMenu} aria-label="CRAFT-W home">
-        <span className="brand-mark" aria-hidden="true">CW</span>
-        <span>CRAFT-W</span>
+      <a className="brand" href="#top" onClick={closeMenu} aria-label="CRAFT-Wrist home">
+        {/* <span className="brand-mark" aria-hidden="true">CW</span> */}
+        <span>CRAFT-Wrist</span>
       </a>
 
       <nav aria-label="Primary navigation" className="site-nav">
