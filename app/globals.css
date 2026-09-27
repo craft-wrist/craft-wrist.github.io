@@ -583,7 +583,7 @@ figcaption {
 .demo-stage-media {
   width: 100%;
   max-width: 450px;
-  aspect-ratio: 406 / 720;
+  aspect-ratio: 406 / 612;
   background: #05080b;
 }
 
@@ -714,6 +714,7 @@ figcaption {
 /* design */
 .design-section {
   padding: 96px 0;
+  background: var(--surface);
 }
 
 .design-layout {

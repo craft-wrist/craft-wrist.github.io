@@ -94,51 +94,53 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-shell design-section" id="design">
-          <div className="section-heading">
-            <div>
-              <h2>Mechanical Design</h2>
-            </div>
-          </div>
-          <div className="design-layout">
-            <figure className="design-figure workspace-figure">
-              <PictureImage
-                src="/media/craft-w-wrist-workspace.png"
-                width={1024}
-                height={1536}
-                alt="CRAFT-Wrist wrist workspace showing radial–ulnar deviation and flexion–extension ranges"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <span>Fig. 02 / wrist workspace</span>
-                <span>±20° deviation · +80° flexion / −18° extension</span>
-              </figcaption>
-            </figure>
-            <div className="design-content">
-              <p className="design-intro">
-                The wrist carries the distal hand as an independent module, so the existing hand mechanics, electronics, and finger-control stack remain intact.
-              </p>
-              <div className="feature-list">
-                {designFeatures.map((feature) => (
-                  <article className="feature-card" key={feature.index}>
-                    <span className="feature-index">{feature.index}</span>
-                    <div>
-                      <h3>{feature.title}</h3>
-                      <p>{feature.body}</p>
-                    </div>
-                  </article>
-                ))}
+        <section className="design-section" id="design">
+          <div className="section-shell">
+            <div className="section-heading">
+              <div>
+                <h2>Mechanical Design</h2>
               </div>
             </div>
-          </div>
-          <div className="spec-strip" aria-label="CRAFT-Wrist specifications">
-            {specs.map((spec) => (
-              <div className="spec-item" key={spec.label}>
-                <span>{spec.label}</span>
-                <strong>{spec.value}</strong>
+            <div className="design-layout">
+              <figure className="design-figure workspace-figure">
+                <PictureImage
+                  src="/media/craft-w-wrist-workspace.png"
+                  width={1024}
+                  height={1536}
+                  alt="CRAFT-Wrist wrist workspace showing radial–ulnar deviation and flexion–extension ranges"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>
+                  <span>Fig. 02 / wrist workspace</span>
+                  <span>±20° deviation · +80° flexion / −18° extension</span>
+                </figcaption>
+              </figure>
+              <div className="design-content">
+                <p className="design-intro">
+                  The wrist carries the distal hand as an independent module, so the existing hand mechanics, electronics, and finger-control stack remain intact.
+                </p>
+                <div className="feature-list">
+                  {designFeatures.map((feature) => (
+                    <article className="feature-card" key={feature.index}>
+                      <span className="feature-index">{feature.index}</span>
+                      <div>
+                        <h3>{feature.title}</h3>
+                        <p>{feature.body}</p>
+                      </div>
+                    </article>
+                  ))}
+                </div>
               </div>
-            ))}
+            </div>
+            <div className="spec-strip" aria-label="CRAFT-Wrist specifications">
+              {specs.map((spec) => (
+                <div className="spec-item" key={spec.label}>
+                  <span>{spec.label}</span>
+                  <strong>{spec.value}</strong>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 

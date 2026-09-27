@@ -76,10 +76,10 @@ export const taskVideos: TaskVideo[] = [
     label: 'Nail hammering',
     wristRole:
       'Aligns the hammer head with the nail axis before impact and restores alignment between strokes while the arm drives the strike.',
-    src: '/media/demo-Hammer.mp4',
-    poster: '/media/demo-Hammer-poster.jpg',
+    src: '/media/demo-Hammer-cropped.mp4',
+    poster: '/media/demo-Hammer-cropped-poster.jpg',
     posterWidth: 406,
-    posterHeight: 720,
+    posterHeight: 612,
   },
   {
     id: 'wiping',
@@ -87,10 +87,10 @@ export const taskVideos: TaskVideo[] = [
     label: 'Blackboard wiping',
     wristRole:
       'Holds the eraser against the board and regulates the contact angle while the arm supplies the wiping motion.',
-    src: '/media/demo-Wiping.mp4',
-    poster: '/media/demo-Wiping-poster.jpg',
+    src: '/media/demo-Wiping-cropped.mp4',
+    poster: '/media/demo-Wiping-cropped-poster.jpg',
     posterWidth: 406,
-    posterHeight: 720,
+    posterHeight: 612,
   },
   {
     id: 'wrench-pick',
@@ -98,10 +98,10 @@ export const taskVideos: TaskVideo[] = [
     label: 'Grasp and reorient',
     wristRole:
       'Aligns the hand to the object before closing the fingers, then corrects orientation locally without repositioning the whole arm.',
-    src: '/media/demo-Wrench-Pick.mp4',
-    poster: '/media/demo-Wrench-Pick-poster.jpg',
+    src: '/media/demo-Wrench-Pick-cropped.mp4',
+    poster: '/media/demo-Wrench-Pick-cropped-poster.jpg',
     posterWidth: 406,
-    posterHeight: 720,
+    posterHeight: 612,
   },
 ];
 
