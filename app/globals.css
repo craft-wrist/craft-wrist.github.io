@@ -514,20 +514,6 @@ figcaption {
 /* demos */
 .demo-section {
   padding: 88px 0 96px;
-  background: var(--dark);
-  color: #f7f8fa;
-}
-
-.on-dark .section-kicker {
-  color: var(--blue-soft);
-}
-
-.on-dark .heading-note {
-  color: #8b98a6;
-}
-
-.demo-section .section-heading h2 {
-  color: #f7f8fa;
 }
 
 .demo-explorer {
@@ -539,7 +525,7 @@ figcaption {
 .demo-tabs {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid var(--dark-line);
+  border-top: 1px solid var(--line);
 }
 
 .demo-tabs button {
@@ -550,9 +536,9 @@ figcaption {
   min-height: 80px;
   padding: 0 14px 0 0;
   border: 0;
-  border-bottom: 1px solid var(--dark-line);
+  border-bottom: 1px solid var(--line);
   background: transparent;
-  color: #778390;
+  color: var(--muted);
   text-align: left;
   cursor: pointer;
 }
@@ -571,12 +557,12 @@ figcaption {
 .demo-tabs button i {
   font-style: normal;
   opacity: 0;
-  color: var(--acid);
+  color: var(--blue);
 }
 
 .demo-tabs button:hover,
 .demo-tabs button.active {
-  color: white;
+  color: var(--ink);
 }
 
 .demo-tabs button.active {
@@ -589,13 +575,15 @@ figcaption {
 
 .demo-stage {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(240px, 0.65fr);
+  grid-template-columns: minmax(0, 450px) minmax(240px, 1fr);
   gap: 38px;
   align-items: stretch;
 }
 
 .demo-stage-media {
-  min-height: 490px;
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 406 / 720;
   background: #05080b;
 }
 
@@ -663,7 +651,7 @@ figcaption {
 
 .demo-stage-copy h3 {
   margin-top: 16px;
-  color: white;
+  color: var(--ink);
   font-size: clamp(2rem, 3.4vw, 3.4rem);
   line-height: 0.96;
   letter-spacing: -0.075em;
@@ -671,7 +659,7 @@ figcaption {
 
 .demo-stage-copy > p:not(.stage-kicker) {
   margin-top: 24px;
-  color: #aab5bf;
+  color: #596168;
   line-height: 1.6;
   font-size: 0.92rem;
 }
@@ -682,16 +670,16 @@ figcaption {
   gap: 9px 15px;
   margin-top: 38px;
   padding-top: 20px;
-  border-top: 1px solid var(--dark-line);
+  border-top: 1px solid var(--line);
   font-size: 0.68rem;
 }
 
 .stage-split span {
-  color: #76818b;
+  color: var(--muted);
 }
 
 .stage-split strong {
-  color: #f7f8fa;
+  color: var(--ink);
   font-weight: 600;
 }
 
@@ -702,11 +690,11 @@ figcaption {
   gap: 18px;
   margin: 34px 0 0 316px;
   padding-top: 22px;
-  border-top: 1px solid var(--dark-line);
+  border-top: 1px solid var(--line);
 }
 
 .demo-footnote p {
-  color: #8b98a6;
+  color: var(--muted);
   font-size: 0.8rem;
   line-height: 1.5;
 }
@@ -1146,10 +1134,6 @@ footer > a:last-child {
     grid-template-columns: 1fr;
   }
 
-  .demo-stage-media {
-    min-height: 500px;
-  }
-
   .demo-stage-copy {
     padding: 12px 0 0;
   }
@@ -1266,10 +1250,6 @@ footer > a:last-child {
 
   .demo-tabs button {
     min-height: 56px;
-  }
-
-  .demo-stage-media {
-    min-height: 420px;
   }
 
   .stage-split {

@@ -94,24 +94,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="demo-section" id="demonstrations">
-          <div className="section-shell">
-            <div className="section-heading on-dark">
-              <div>
-                <h2>Demonstrations</h2>
-              </div>
-              {/* <p className="heading-note">Switch tasks to see where local orientation enters the manipulation loop.</p> */}
-            </div>
-            <DemoExplorer tasks={taskVideos} />
-            {/* <div className="demo-footnote">
-              <span className="status-tag planned">Planned comparison</span>
-              <p>
-                Wrist-locked versus actively controlled trials (W0 / W1 / W2) will isolate the value and cost of the added DoF.
-              </p>
-            </div> */}
-          </div>
-        </section>
-
         <section className="section-shell design-section" id="design">
           <div className="section-heading">
             <div>
@@ -157,6 +139,17 @@ export default function Home() {
                 <strong>{spec.value}</strong>
               </div>
             ))}
+          </div>
+        </section>
+
+        <section className="demo-section" id="demonstrations">
+          <div className="section-shell">
+            <div className="section-heading">
+              <div>
+                <h2>Demonstrations</h2>
+              </div>
+            </div>
+            <DemoExplorer tasks={taskVideos} />
           </div>
         </section>
 

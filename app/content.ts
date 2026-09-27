@@ -34,7 +34,7 @@ export const resources: Resource[] = [
   {
     // Not yet released; links back to this page until it is.
     id: 'control-api',
-    label: 'Control API',
+    label: 'Control API (coming soon)',
     href: '#top',
   },
   {
