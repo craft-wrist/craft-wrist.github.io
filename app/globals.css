@@ -231,9 +231,9 @@ figcaption,
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
-  gap: clamp(40px, 8vw, 120px);
+  gap: clamp(32px, 4vw, 56px) clamp(40px, 8vw, 120px);
   align-items: center;
-  padding: 86px 7vw 110px;
+  padding: 72px 7vw 64px;
   background: var(--dark);
   color: #f7f8fa;
   overflow: hidden;
@@ -451,14 +451,14 @@ figcaption {
 
 /* proposition */
 .problem-section {
-  padding: 150px 0 160px;
+  padding: 96px 0;
 }
 
 .section-intro {
   display: grid;
   grid-template-columns: 0.42fr 1fr;
   gap: 60px;
-  padding-bottom: 62px;
+  padding-bottom: 40px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -474,7 +474,7 @@ figcaption {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(40px, 12vw, 180px);
-  padding-top: 58px;
+  padding-top: 44px;
 }
 
 .problem-statement {
@@ -513,7 +513,7 @@ figcaption {
 
 /* demos */
 .demo-section {
-  padding: 128px 0 120px;
+  padding: 88px 0 96px;
   background: var(--dark);
   color: #f7f8fa;
 }
@@ -725,7 +725,7 @@ figcaption {
 
 /* design */
 .design-section {
-  padding: 150px 0 160px;
+  padding: 96px 0;
 }
 
 .design-layout {
@@ -841,7 +841,7 @@ figcaption {
 
 /* coupling */
 .coupling-section {
-  padding: 140px 0 150px;
+  padding: 96px 0;
   background: var(--surface);
 }
 
@@ -938,7 +938,7 @@ figcaption {
 
 /* citation / footer */
 .citation-section {
-  padding: 112px 0;
+  padding: 80px 0;
   background: var(--blue);
   color: white;
 }
@@ -1243,16 +1243,16 @@ footer > a:last-child {
 
   .problem-section,
   .design-section {
-    padding: 90px 0;
+    padding: 64px 0;
   }
 
   .demo-section,
   .coupling-section {
-    padding: 88px 0;
+    padding: 64px 0;
   }
 
   .citation-section {
-    padding: 84px 0;
+    padding: 60px 0;
   }
 
   .section-intro h2,
