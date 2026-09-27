@@ -85,9 +85,26 @@ export default function Home() {
 
         <section className="resources-section" id="resources"><div className="section-shell"><div className="section-heading"><div><p className="section-kicker">05 / Build from the work</p><h2>Open hardware, in stages.</h2></div><p className="heading-note">Select a resource to see what is available now and what is being prepared.</p></div><ResourceExplorer resources={resources} /></div></section>
 
-        <section className="citation-section" id="cite"><div className="section-shell citation-shell"><div><p className="section-kicker">06 / Reference</p><h2>Cite the work in progress.</h2><p className="citation-note">The manuscript is in preparation. This provisional citation will be replaced with the public record when released.</p></div><div className="citation-block"><BibTeXCopy bibtex={bibtex} /><pre><code>{bibtex}</code></pre></div></div></section>
+        <section className="citation-section" id="cite">
+          <div className="section-shell citation-shell">
+            <div>
+              {/* <p className="section-kicker">06 / Reference</p> */}
+              <h2>BibTeX</h2>
+            </div>
+            <div className="citation-block"><BibTeXCopy bibtex={bibtex} />
+              <pre><code>{bibtex}</code></pre>
+            </div>
+          </div>
+        </section>
 
-        <footer><a className="brand footer-brand" href="#top" aria-label="CRAFT-W home"><span className="brand-mark" aria-hidden="true">CW</span><span>CRAFT-W</span></a><p>Department of Electrical Engineering and Computer Science<br />University of California, Irvine</p><a href="mailto:ssakib@uci.edu">ssakib@uci.edu ↗</a></footer>
+        <footer>
+          <a className="brand footer-brand" href="#top" aria-label="CRAFT-W home">
+            {/* <span className="brand-mark" aria-hidden="true">CW</span> */}
+            <span>CRAFT-Wrist</span>
+          </a>
+          <p>Department of Electrical Engineering and Computer Science<br />University of California, Irvine</p>
+          <a href="mailto:ssakib@uci.edu">ssakib@uci.edu ↗</a>
+        </footer>
       </main>
     </>
   );

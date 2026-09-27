@@ -1,7 +1,6 @@
-# CRAFT-W Project Website
+# CRAFT-Wrist Project Website
 
-Research project page for **CRAFT-W: A Direct-drive Two-DoF Wrist Extension
-for the CRAFT Hand**.
+Research project page for **A Direct Rigid Transmission 2-DoF Wrist Extension for Tendon-Driven Hand**.
 
 ## Local development
 

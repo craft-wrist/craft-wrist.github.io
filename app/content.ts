@@ -15,8 +15,10 @@ export const resources: Resource[] = [
     id: 'paper',
     index: '01',
     label: 'Paper',
-    description: 'arXiv preprint · manuscript in preparation',
-    status: 'coming-soon',
+    description: 'arXiv preprint',
+    status: 'available',
+    href: 'https://arxiv.org/abs/2609.22681',
+    external: true,
   },
   {
     id: 'assembly',
@@ -168,13 +170,9 @@ export const specs: Spec[] = [
   { label: 'Control', value: 'Position / current-limited' },
 ];
 
-export const bibtex = `@misc{pang2026craftw,
-  title = {CRAFT-W: A Direct-drive
-           Two-DoF Wrist Extension for
-           the CRAFT Hand},
-  author = {Pang, Yujie and
-            Sakib, Sadman and Al Faruque,
-            Mohammad Abdullah},
-  year = {2026},
-  howpublished = {Manuscript in preparation}
+export const bibtex = `@misc{pang2026craftwrist,
+      title={A Direct Rigid Transmission 2-DoF Wrist Extension for Tendon-Driven Hand}, 
+      author={Pang, Yujie and Sakib, Sadman and Al Faruque, Mohammad Abdullah},
+      year={2026},
+      url={https://arxiv.org/abs/2609.22681}, 
 }`;
