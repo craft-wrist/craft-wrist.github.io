@@ -2,7 +2,6 @@ import Header from '@/app/components/Header';
 import BibTeXCopy from '@/app/components/BibTeXCopy';
 import PictureImage from '@/app/components/PictureImage';
 import DemoExplorer from '@/app/components/DemoExplorer';
-import { ResourceExplorer } from '@/app/components/DemoExplorer';
 import { bibtex, resources, specs, taskVideos } from '@/app/content';
 
 const axisCards = [
@@ -32,13 +31,19 @@ export default function Home() {
               <p>Yujie Pang<sup>1,2</sup> · Sadman Sakib<sup>1</sup> · Mohammad Abdullah Al Faruque<sup>1</sup></p>
               <p><sup>1</sup>University of California, Irvine &nbsp;·&nbsp; <sup>2</sup>UCInspire</p>
             </div>
-            <div className="hero-actions" aria-label="Primary project links">
-              <a className="button button-primary" href="#demonstrations">
-                Watch demonstrations <span aria-hidden="true">↓</span>
-              </a>
-              <a className="button button-quiet" href="#design">
-                Explore the mechanism <span aria-hidden="true">→</span>
-              </a>
+            <div className="hero-actions" aria-label="Project resources">
+              {resources.map((resource) => (
+                <a
+                  className="button"
+                  key={resource.id}
+                  href={resource.href}
+                  target={resource.external ? '_blank' : undefined}
+                  rel={resource.external ? 'noreferrer' : undefined}
+                  download={resource.download}
+                >
+                  {resource.label} <span aria-hidden="true">↗</span>
+                </a>
+              ))}
             </div>
           </div>
           <figure className="hero-figure">
@@ -221,19 +226,6 @@ export default function Home() {
                 </p>
               </article>
             </div>
-          </div>
-        </section>
-
-        <section className="resources-section" id="resources">
-          <div className="section-shell">
-            <div className="section-heading">
-              <div>
-                <p className="section-kicker">05 / Build from the work</p>
-                <h2>Open hardware, in stages.</h2>
-              </div>
-              <p className="heading-note">Select a resource to see what is available now and what is being prepared.</p>
-            </div>
-            <ResourceExplorer resources={resources} />
           </div>
         </section>
 

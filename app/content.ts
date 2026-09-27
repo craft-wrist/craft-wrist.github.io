@@ -1,64 +1,45 @@
-export type ResourceStatus = 'available' | 'coming-soon';
-
 export interface Resource {
   id: string;
-  index: string;
   label: string;
-  description: string;
-  status: ResourceStatus;
-  href?: string;
+  href: string;
   external?: boolean;
+  download?: string;
 }
 
 export const resources: Resource[] = [
   {
     id: 'paper',
-    index: '01',
     label: 'Paper',
-    description: 'arXiv preprint',
-    status: 'available',
     href: 'https://arxiv.org/abs/2609.22681',
     external: true,
   },
   {
     id: 'assembly',
-    index: '02',
     label: 'Assembly guide',
-    description: 'Documentation and assembly video',
-    status: 'available',
     href: 'https://www.youtube.com/watch?v=n6Zhwm3bFOk',
     external: true,
   },
   {
     id: 'bom',
-    index: '03',
     label: 'Bill of materials',
-    description: 'Parts list and sourcing',
-    status: 'available',
     href: 'https://docs.google.com/spreadsheets/d/1fitplWpsL6kj0DHfCh3jbNVrBhKQ1Oqo/edit?usp=sharing&ouid=113564166501064431161&rtpof=true&sd=true',
     external: true,
   },
   {
     id: 'print-files',
-    index: '04',
     label: 'Print files',
-    description: '3MF package for 3D printing',
-    status: 'available',
     href: '/media/craft-w-print-files.3mf',
+    download: 'craft-w-print-files.3mf',
   },
   {
+    // Not yet released; links back to this page until it is.
     id: 'control-api',
-    index: '05',
     label: 'Control API',
-    description: 'Firmware and control code',
-    status: 'coming-soon',
+    href: '#top',
   },
   {
     id: 'solidworks',
-    index: '06',
     label: 'SolidWorks',
-    description: 'CAD model source files',
-    status: 'available',
     href: 'https://github.com/craft-wrist/craft-wrist-cad-file',
     external: true,
   },
@@ -74,38 +55,7 @@ export const navItems: NavItem[] = [
   { id: 'demonstrations', label: 'Demonstrations' },
   { id: 'design', label: 'Mechanism' },
   { id: 'coupling', label: 'Coupling' },
-  { id: 'resources', label: 'Resources' },
   { id: 'cite', label: 'Cite' },
-];
-
-export interface HeroAction {
-  id: string;
-  label: string;
-  href: string;
-  external?: boolean;
-}
-
-export const heroActions: HeroAction[] = [
-  { id: 'video', label: 'Video', href: '#overview' },
-  { id: 'demo', label: 'Demo', href: '#demonstrations' },
-  {
-    id: 'cad',
-    label: 'CAD',
-    href: 'https://github.com/craft-wrist/craft-wrist-cad-file',
-    external: true,
-  },
-  {
-    id: 'bom',
-    label: 'BOM',
-    href: 'https://docs.google.com/spreadsheets/d/1fitplWpsL6kj0DHfCh3jbNVrBhKQ1Oqo/edit?usp=sharing&ouid=113564166501064431161&rtpof=true&sd=true',
-    external: true,
-  },
-  {
-    id: 'github',
-    label: 'GitHub',
-    href: 'https://github.com/craft-wrist',
-    external: true,
-  },
 ];
 
 export interface TaskVideo {
