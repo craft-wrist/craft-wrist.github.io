@@ -34,8 +34,9 @@ export const resources: Resource[] = [
   {
     // Not yet released; links back to this page until it is.
     id: 'control-api',
-    label: 'Control API (coming soon)',
-    href: '#top',
+    label: 'Control API',
+    href: 'https://github.com/fslee2/Craft_wrist-URDF',
+    external: true,
   },
   {
     id: 'solidworks',
@@ -51,9 +52,9 @@ export interface NavItem {
 }
 
 export const navItems: NavItem[] = [
-  { id: 'overview', label: 'Why it matters' },
+  { id: 'motivation', label: 'Motivation' },
+  { id: 'design', label: 'Mechanical Design' },
   { id: 'demonstrations', label: 'Demonstrations' },
-  { id: 'design', label: 'Mechanism' },
   { id: 'coupling', label: 'Coupling' },
   { id: 'cite', label: 'Cite' },
 ];

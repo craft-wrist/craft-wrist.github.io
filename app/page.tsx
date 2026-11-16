@@ -71,7 +71,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-shell problem-section" id="overview">
+        <section className="section-shell problem-section" id="motivation">
           <div className="section-intro">
             <h2>Motivation</h2>
           </div>
