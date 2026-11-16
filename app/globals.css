@@ -318,18 +318,18 @@ figcaption,
 .hero-byline {
   margin-top: 38px;
   color: #f7f8fa;
-  font-size: 0.78rem;
+  font-size: 1rem;
   line-height: 1.75;
 }
 
 .hero-byline p + p {
   color: #73808d;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
 }
 
 sup {
   color: var(--blue);
-  font-size: 0.62em;
+  font-size: 0.80em;
 }
 
 .hero-actions {
